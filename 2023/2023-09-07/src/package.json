@@ -1,5 +1,5 @@
 {
-  "name": "basic-of-rust-1",
+  "name": "slide",
   "private": true,
   "scripts": {
     "build": "slidev build",

@@ -1,4 +1,4 @@
-# Basics of Rust (Part 8)
+# Basics of Rust (Part 7)
 
 BiznetGio TechTalks.
 

@@ -14,7 +14,7 @@ info: |
 # Rust Fundamentals
 
 Basics of Rust<br>
-Part 8
+Part 7
 
 <div class="uppercase text-sm tracking-widest">
 Azzam S.A
