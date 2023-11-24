@@ -1,0 +1,43 @@
+#!/usr/bin/env -S just --justfile
+
+alias d := dev
+
+# List available commands.
+_default:
+    just --list --unsorted
+
+# Setup the repository.
+setup:
+    pnpm install
+
+# Tasks to make the code-base comply with the rules. Mostly used in git hooks.
+comply: build
+
+# Check if the repository comply with the rules and ready to be pushed.
+check: build
+
+# Develop the slide.
+dev:
+    pnpm run dev
+
+# Run the slide in production mode.
+prod:
+    pnpm run remote
+
+# Build the slide
+build:
+    pnpm run build
+
+# Export the slide
+export:
+    pnpm run export
+
+# Check dependencies health. Pass `--write` to uppgrade dependencies.
+[unix]
+up arg="":
+    #!/usr/bin/env bash
+    if [ "{{ arg }}" = "--write" ]; then
+        taze --write
+    else
+        taze
+    fi;
